@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --alsana-ivory: #fdf9f7;
+    --alsana-pearl: #fffdfc;
+    --alsana-blush: #f7e6ec;
+    --alsana-champagne: #f4ebe4;
+    --alsana-dusty-rose: #b87487;
+    --alsana-rose-deep: #8f4e61;
+    --alsana-rose-gold: #c69674;
+    --alsana-ink: #2d1e24;
+    --alsana-ink-muted: #664d56;
+  }
+
+  html {
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--alsana-ivory);
+    color: var(--alsana-ink);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.rose-gold-gradient {
+  background: linear-gradient(135deg, #d8b294 0%, #b98165 48%, #e4c5ac 100%);
+}
+
+.rose-gold-text {
+  background: linear-gradient(135deg, #b67e5f 0%, #8f4e61 52%, #c69674 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes gentle-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
